@@ -21,10 +21,6 @@ computer science problems.
 The project is organized by data structure, making it easy to navigate and find specific problems. Each problem resides
 in its own subpackage.
 
-<!-- PROJECT_STRUCTURE_START -->
-<!-- The project structure will be automatically inserted here -->
-<!-- PROJECT_STRUCTURE_END -->
-
 ## 🚀 Getting Started
 
 ### Prerequisites
