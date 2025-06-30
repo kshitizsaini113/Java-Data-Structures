@@ -1,21 +1,72 @@
+// Configures the JaCoCo test report generation.
 jacocoTestReport {
     reports {
+        // We primarily use the HTML report, so XML and CSV are disabled.
         xml.required = false
         csv.required = false
+        // Specifies the output directory for the HTML report.
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
 
+// Configures the JaCoCo code coverage verification rules.
+// The 'check' task will fail the build if these rules are not met.
 jacocoTestCoverageVerification {
     violationRules {
         rule {
+
+            // --- Coverage Metrics ---
+
             limit {
+                // INSTRUCTION: The most fine-grained metric, checks Java bytecode execution.
+                // A high value here is a strong indicator of thorough testing.
+                counter = 'INSTRUCTION'
+                value = 'COVEREDRATIO'
+                minimum = 0.95 // Require 95% instruction coverage.
+            }
+
+            limit {
+                // BRANCH: Ensures all branches of if/else and switch statements are tested.
+                // 100% branch coverage is a critical goal for reliability.
+                counter = 'BRANCH'
+                value = 'COVEREDRATIO'
+                minimum = 1.00 // Require 100% branch coverage.
+            }
+
+            limit {
+                // LINE: The most common metric, ensures each line of code is executed.
                 counter = 'LINE'
                 value = 'COVEREDRATIO'
-                minimum = 0.95
+                minimum = 1.00 // Require 100% line coverage.
+            }
+
+            // --- Complexity and Structure Metrics ---
+
+            limit {
+                // COMPLEXITY: Measures cyclomatic complexity to keep methods simple.
+                // This rule applies per method to prevent overly complex logic.
+                element = 'METHOD' // Apply this limit to each method individually.
+                counter = 'COMPLEXITY'
+                value = 'TOTALCOUNT'
+                maximum = 10 // A common industry standard for maximum complexity.
+            }
+
+            limit {
+                // METHOD: Ensures that methods are not missed entirely by tests.
+                counter = 'METHOD'
+                value = 'MISSEDCOUNT'
+                maximum = 0 // Fail if even a single method is not tested.
+            }
+
+            limit {
+                // CLASS: Ensures that no class is left completely untested.
+                counter = 'CLASS'
+                value = 'MISSEDCOUNT'
+                maximum = 0 // Fail if any class has zero coverage.
             }
         }
     }
 }
 
+// Ensures that the coverage verification runs automatically as part of the 'check' lifecycle task.
 check.dependsOn jacocoTestCoverageVerification
