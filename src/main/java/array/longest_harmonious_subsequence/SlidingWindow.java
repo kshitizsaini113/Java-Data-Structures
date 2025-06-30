@@ -17,6 +17,15 @@ public class SlidingWindow {
      * window (two-pointer) approach. The window expands from the right and
      * shrinks from the left to find the longest valid subsequence where the
      * difference between the maximum and minimum element is exactly 1.
+     * <p>
+     * <b>Time Complexity:</b> O(n log n), where n is the number of elements in {@code nums}.
+     * The complexity is dominated by the initial sorting of the array. The subsequent
+     * sliding window scan is O(n).
+     * <p>
+     * <b>Space Complexity:</b> O(log n) or O(1). The space used by the sorting
+     * algorithm in Java for primitives is typically O(log n) for the recursion stack.
+     * If sorting is considered in-place, the space complexity is O(1) as we only use
+     * a few extra variables.
      *
      * @param nums The input integer array.
      * @return The length of the longest harmonious subsequence. Returns 0 if no such subsequence exists.
