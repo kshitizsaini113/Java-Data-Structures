@@ -22,6 +22,10 @@ public class SlidingWindow {
      * @return The length of the longest harmonious subsequence. Returns 0 if no such subsequence exists.
      */
     public int findLHS(int[] nums) {
+        // A null or empty array cannot have a harmonious subsequence.
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
         // First, sort the array to group similar numbers together.
         // This is essential for the sliding window approach to work correctly.
         Arrays.sort(nums);
