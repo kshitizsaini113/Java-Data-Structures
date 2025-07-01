@@ -8,8 +8,8 @@ public class Iteration {
     /**
      * Calculates the total number of possible original strings that could result
      * in the given {@code word} after at most one long-press key action.
-     * <p>
-     * <b>Algorithm Explanation:</b>
+     *
+     * <p><b>Algorithm Explanation:</b>
      * The total number of possibilities is the sum of two cases:
      * <ol>
      *     <li><b>No long-press:</b> The original string was {@code word} itself. This always accounts for 1 possibility.</li>
@@ -24,10 +24,10 @@ public class Iteration {
      *     <li>At index 4 ('l'), {@code word[4] == word[3]}. This implies an original "hello" could have been typed, with the second 'l' being long-pressed. Count = 3.</li>
      * </ul>
      * This logic simplifies to: {@code 1 + (the number of times a character is identical to its preceding character)}.
-     * <p>
-     * <b>Time Complexity:</b> O(n), where n is the length of the {@code word}, as we perform a single pass through the string.
-     * <p>
-     * <b>Space Complexity:</b> O(1), as we only use a constant amount of extra space for the counter.
+     *
+     * <p><b>Time Complexity:</b> O(n), where n is the length of the {@code word}, as we perform a single pass through the string.
+     *
+     * <p><b>Space Complexity:</b> O(1), as we only use a constant amount of extra space for the counter.
      *
      * @param word The final string displayed on the screen.
      * @return The total number of possible original strings. Returns 0 for a null or empty string.
