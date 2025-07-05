@@ -7,6 +7,10 @@ checkstyle {
     configProperties = [
             "checkstyle.cache.file": "${projectDir}/checkstyle-cachefile"
     ]
+
+    // Fail the build if there is more than 0 errors.
+    // This enforces a strict quality gate.
+    maxErrors = 0
 }
 
 tasks.withType(Checkstyle).configureEach {
