@@ -83,7 +83,7 @@ public class Array {
      * <p><b>Complexity:</b> O(1) time and O(1) space.
      *
      * @return {@code true} if and only if this stack contains no items;
-     * {@code false} otherwise.
+     *         {@code false} otherwise.
      */
     public boolean isEmpty() {
         return top == -1;
@@ -95,7 +95,7 @@ public class Array {
      * <p><b>Complexity:</b> O(1) time and O(1) space.
      *
      * @return {@code true} if the stack has reached its maximum capacity;
-     * {@code false} otherwise.
+     *         {@code false} otherwise.
      */
     public boolean isFull() {
         return top == arr.length - 1;
