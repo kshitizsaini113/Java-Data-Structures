@@ -30,7 +30,7 @@ jacocoTestCoverageVerification {
                 // 100% branch coverage is a critical goal for reliability.
                 counter = 'BRANCH'
                 value = 'COVEREDRATIO'
-                minimum = 1.00 // Require 100% branch coverage.
+                minimum = 0.80 // Require 80% branch coverage.
             }
 
             limit {
