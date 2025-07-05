@@ -9,6 +9,8 @@ import java.util.Map;
  * <p>This approach first iterates through the array to build a frequency map of all
  * numbers, then iterates through the map to find the largest number whose value
  * matches its frequency.
+ *
+ * @see FrequencyArray Frequency Array for the optimal approach.
  */
 public class FrequencyMap {
 
