@@ -36,7 +36,7 @@ public class MonotonicStack {
      * @param nums1 A subset of {@code nums2} for which to find the next greater elements.
      * @param nums2 The array in which to search for the next greater elements.
      * @return An array of the same length as {@code nums1}, where each element is the
-     * next greater element, or -1 if none exists.
+     *     next greater element, or -1 if none exists.
      */
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         // Map to store {element -> nextGreaterElement} for nums2
