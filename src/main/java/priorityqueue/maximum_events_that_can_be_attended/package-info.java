@@ -19,6 +19,6 @@
  * </ul>
  *
  * @see <a href="https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/">
- * 1353. Maximum Number of Events That Can Be Attended</a>
+ *     1353. Maximum Number of Events That Can Be Attended</a>
  */
 package priorityqueue.maximum_events_that_can_be_attended;
