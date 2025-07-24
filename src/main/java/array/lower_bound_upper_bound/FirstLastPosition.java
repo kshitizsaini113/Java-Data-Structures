@@ -22,8 +22,8 @@ public class FirstLastPosition {
      * @param nums   A non-decreasingly sorted array of integers.
      * @param target The value to search for.
      * @return An array of two integers {@code [start, end]} representing the
-     * first and last indices of the target. If the target is not found,
-     * it returns {@code [-1, -1]}.
+     *     first and last indices of the target. If the target is not found,
+     *     it returns {@code [-1, -1]}.
      */
     public int[] searchRange(int[] nums, int target) {
         if (nums == null || nums.length == 0) {
