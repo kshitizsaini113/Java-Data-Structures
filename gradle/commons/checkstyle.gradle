@@ -1,7 +1,7 @@
 checkstyle {
     // Static analysis tools automatically scan your code for style violations, programming errors, and bad practices
     // without actually running it. This ensures consistency and helps catch potential bugs early.
-    toolVersion = '10.26.1'
+    toolVersion = '13.0.0'
     // Explicitly tell Checkstyle where to find its configuration file.
     configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
     configProperties = [

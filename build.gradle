@@ -2,8 +2,8 @@ plugins {
     id 'java'
     id 'jacoco'
     id 'checkstyle'
-    id 'org.owasp.dependencycheck' version '12.1.3'
-    id 'me.champeau.jmh' version '0.7.2'
+    id 'org.owasp.dependencycheck' version '12.1.9'
+    id 'me.champeau.jmh' version '0.7.3'
 }
 
 apply from: 'gradle/commons/jacoco.gradle'
@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.13.2')
+    testImplementation platform('org.junit:junit-bom:6.0.2')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
