@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 21 with Amazon Corretto
+      - name: Set up JDK 25 with Amazon Corretto
         uses: actions/setup-java@v4
         with:
           java-version: '25'
@@ -56,10 +56,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up JDK 21 with Amazon Corretto
+      - name: Set up JDK 25 with Amazon Corretto
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: '25'
           distribution: 'corretto'
 
       # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
